@@ -91,7 +91,7 @@ GDriveNotify.prototype.compare = function() {
         break;
       }
     }
-    if (!gotIt) ret.push({'obj': arr2[j], 'prop': 'inserted'});      
+    if (!gotIt) ret.push({'obj': arr2[i], 'prop': 'inserted'});      
   }
   
   for (var i=0; i<arr1.length; i++) { // получаем удаленные из корзины и сравниваем
