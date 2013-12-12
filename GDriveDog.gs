@@ -18,7 +18,8 @@ var GDriveDog = (function () {
     } else {
       this.root = DriveApp.getRootFolder();
       this.id = this.root.getId();
-    }    
+    }
+    this.name = this.root.getName();
   }
   
   GDriveDog.prototype.getDb = function() { // получаем содержимое хранилища
