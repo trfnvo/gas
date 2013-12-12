@@ -8,7 +8,7 @@ google drive notification code</a>.</p>
 <p>Example:</p>
 <div class="highlight">
 <pre>
-  function myFunction() {
+function myFunction() {
   var gdd = new GDriveDog(ScriptDb.getMyDb(), '0B0YcK5KeNe1tMnZieldHdnNVOFU');  
   var msg = gdd.getMessage();
   if (msg.length &gt; 0) {    
