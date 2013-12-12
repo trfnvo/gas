@@ -22,30 +22,30 @@ var GDriveDog = (function () {
   }
   
   GDriveDog.prototype.getDb = function() { // получаем содержимое хранилища
-    var ret = [], db = this.db, res = db.query({});
+    var ret = [], db = this.db, res = db.query({id: this.id}), item;
     while (res.hasNext()) {
-      ret.push(res.next());
+      item = res.next();
+      ret = ret.concat(item['data']);
     }
     return ret;
   }
   
   GDriveDog.prototype.clearDb = function() { // удаляем содержимое хранилища
-    var db = this.db, res = db.query({});
+    var db = this.db, res = db.query({id: this.id});
     while (res.hasNext()) {
        db.remove(res.next());
     }
     return true;
   }
   
-  GDriveDog.prototype.updateDb = function() { // обновляем содержимое хранилища
+  GDriveDog.prototype.updateDb = function(arr) { // обновляем содержимое хранилища
     this.clearDb(); // удаляем
-    var db = this.db;    
-    var res = db.saveBatch(this.get(), false); // получаем, обновляем
+    var db = this.db, data = arr || this.get(); // получаем
+    var res = db.saveBatch([{id: this.id, data: data}], false); // обновляем
     if (db.allOk(res)) {
       return true;
-    } else {
-      return false; // не удалось сохранить все объекты
     }
+    return false; // не удалось сохранить все объекты
   }
     
   GDriveDog.prototype.get = function() { // получаем свойства каталогов и файлов
@@ -162,12 +162,12 @@ var GDriveDog = (function () {
       }
       if (!gotIt) ret.push({'obj': arr1[i], 'prop': 'deleted'}); // удаленные из корзины
     }
-    this.updateDb();
+    this.updateDb(arr2);
     return ret;  
   }
   
-  GDriveDog.prototype.getMessage = function(updated) { // собираем сообщение
-    var ret = [];
+  GDriveDog.prototype.getMessage = function(arr) { // собираем сообщение
+    var ret = [], updated = arr || this.compare();
     for (var i=0; i<updated.length; i++) {
       var arr = [];
       switch (updated[i].prop) {
