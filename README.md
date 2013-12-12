@@ -9,7 +9,7 @@ google drive notification code</a>.</p>
 <div class="highlight">
 <pre>
 function myFunction() {
-  var gdd = new GDriveDog(ScriptDb.getMyDb(), '0B0YcK5KeNe1tMnZieldHdnNVOFU');  
+  var gdd = new GDriveDog(ScriptDb.getMyDb(), '0B0YcK5KeNe1tMnZieldHdnNVOFU'); // your folder's ID
   var msg = gdd.getMessage();
   if (msg.length &gt; 0) {    
     msg.unshift('Количество объектов: ' + msg.length);
