@@ -26,11 +26,11 @@ function myFunction() {
 <div class="highlight">
 <pre>
 function myFunction() {
-  var gdd = new GDriveDog(ScriptDb.getMyDb(), '0B0YcK5KeNe1tMnZieldHdnNVOFU'); // your folder's ID
+  var gdd = new GDriveDog(ScriptDb.getMyDb(), '0B0YcK5KeNe1tMnZieldHdnNVOFU');
   var data = gdd.compare();
   if (!data.length) return;  
-  var ss = SpreadsheetApp.openById('0AkYcK5KeNe1tdGpIaFJwMVlDSkRFbjFTczNESFdaWUE'); // your spreadsheet's id
-  var sh = ss.getSheets()[0]; 
+  var ss = SpreadsheetApp.openById('0AkYcK5KeNe1tdGpIaFJwMVlDSkRFbjFTczNESFdaWUE');
+  var sh = ss.getSheets()[0];
   for (var i=0; i<data.length; i++) {
     sh.appendRow([new Date(), data[i].obj.name, data[i].obj.id, data[i].prop, data[i].obj.openUrl]);
   }  
