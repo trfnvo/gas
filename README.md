@@ -21,6 +21,7 @@ function myFunction() {
   }  
 }
 </pre>
+</div>
 
 <p>Example 2. Storing data in spreadsheet: </p>
 <div class="highlight">
@@ -36,3 +37,4 @@ function myFunction() {
   }  
 }
 </pre>
+</div>
