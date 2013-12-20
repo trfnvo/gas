@@ -30,8 +30,7 @@ function myFunction() {
   var data = gdd.compare();
   if (!data.length) return;  
   var ss = SpreadsheetApp.openById('0AkYcK5KeNe1tdGpIaFJwMVlDSkRFbjFTczNESFdaWUE'); // your spreadsheet's id
-  var sh = ss.getSheets()[0];
-  Logger.log(data[0]);
+  var sh = ss.getSheets()[0]; 
   for (var i=0; i<data.length; i++) {
     sh.appendRow([new Date(), data[i].obj.name, data[i].obj.id, data[i].prop, data[i].obj.openUrl]);
   }  
