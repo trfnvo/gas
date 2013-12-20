@@ -5,9 +5,8 @@ gas
 google drive notification code</a> (deprecated).</p>
 <p>GDriveDog.gs - class to work with <a href="http://www.daspot.ru/2013/12/google-drive-2.html">
 google drive notification code</a>.</p>
-<p>Example 1. Sending data via email:</p>
-<div class="highlight">
-<pre>
+Example 1. Sending data via email:
+```javascript
 function myFunction() {
   var gdd = new GDriveDog(ScriptDb.getMyDb(), '0B0YcK5KeNe1tMnZieldHdnNVOFU'); // your folder's ID
   var msg = gdd.getMessage();
@@ -20,12 +19,10 @@ function myFunction() {
     );
   }  
 }
-</pre>
-</div>
+```
 
-<p>Example 2. Storing data in spreadsheet: </p>
-<div class="highlight">
-<pre>
+Example 2. Storing data in spreadsheet:
+```javascript
 function myFunction() {
   var gdd = new GDriveDog(ScriptDb.getMyDb(), '0B0YcK5KeNe1tMnZieldHdnNVOFU'); // your folder's ID
   var data = gdd.compare();
@@ -36,5 +33,4 @@ function myFunction() {
     sh.appendRow([new Date(), data[i].obj.name, data[i].obj.id, data[i].prop, data[i].obj.openUrl]);
   }  
 }
-</pre>
-</div>
+```
