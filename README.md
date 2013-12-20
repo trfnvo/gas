@@ -8,16 +8,16 @@ google drive notification code</a>.</p>
 Example 1. Sending data via email:
 ```javascript
 function myFunction() {
-  var gdd = new GDriveDog(ScriptDb.getMyDb(), '0B0YcK5KeNe1tMnZieldHdnNVOFU'); // your folder's ID
-  var msg = gdd.getMessage();
-  if (msg.length &gt; 0) {    
-    msg.unshift('Количество объектов: ' + msg.length);
-    GmailApp.sendEmail(
-      Session.getActiveUser().getEmail(), 
-      'Обнаружены изменения на Диске Google, каталог - ' + gdd.name, 
-      msg.join('\n')
-    );
-  }  
+  var gdd = new GDriveDog(ScriptDb.getMyDb(), '0B0YcK5KeNe1tMnZieldHdnNVOFU'); // your folder's ID
+  var msg = gdd.getMessage();
+  if (msg.length &gt; 0) {
+    msg.unshift('Количество объектов: ' + msg.length);
+    GmailApp.sendEmail(
+      Session.getActiveUser().getEmail(),
+      'Обнаружены изменения на Диске Google, каталог - ' + gdd.name,
+      msg.join('\n')
+    );
+  }
 }
 ```
 
