@@ -20,7 +20,7 @@ function myFunction() {
   }
 }
 ```
-[![ScreenShot](https://raw.github.com/dab00/ws-console/master/screenshot.jpg)](http://youtu.be/P2BWY25u22k)
+[![ScreenShot](https://raw.github.com/dab00/gas/master/scr1.jpg)](http://youtu.be/P2BWY25u22k)
 
 Example 2. Storing data in spreadsheet:
 ```javascript
@@ -35,4 +35,4 @@ function myFunction() {
   }  
 }
 ```
-[![ScreenShot](https://raw.github.com/dab00/ws-console/master/screenshot.jpg)](http://youtu.be/Xr5VgpxZz0E)
+[![ScreenShot](https://raw.github.com/dab00/gas/master/scr2.jpg)](http://youtu.be/Xr5VgpxZz0E)
