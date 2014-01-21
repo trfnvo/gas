@@ -50,3 +50,4 @@ function myFunction() {
   calendar.createEvent('Dog', eventDate, eventDate, {description: msg});
 }
 ```
+[![ScreenShot](https://raw.github.com/dab00/gas/master/scr3.jpg)](http://youtu.be/PfA6uxSleKE)
