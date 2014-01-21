@@ -36,3 +36,17 @@ function myFunction() {
 }
 ```
 [![ScreenShot](https://raw.github.com/dab00/gas/master/scr2.jpg)](http://youtu.be/Xr5VgpxZz0E)
+
+Example 3. Sending data via sms:
+```javascript
+function myFunction() {
+  var gdd = new GDriveDog(ScriptDb.getMyDb(), '0B0YcK5KeNe1tMnZieldHdnNVOFU'); // your folder's ID
+  var data = gdd.compare();
+  if (!data.length) return;  
+  var msg = data.map(function(obj){return obj.obj.name + ':\n' + obj.obj.openUrl}).join('\n\n');
+  var calendar = CalendarApp.getCalendarsByName('Dog')[0]; // your calendar's name
+  if (!calendar) return;  
+  var eventDate = new Date(Date.now() + 120000);  
+  calendar.createEvent('Dog', eventDate, eventDate, {description: msg});
+}
+```
