@@ -10,7 +10,7 @@ Example 1. Sending data via email:
 function myFunction() {
   var gdd = new GDriveDog(ScriptDb.getMyDb(), '0B0YcK5KeNe1tMnZieldHdnNVOFU'); // your folder's ID
   var msg = gdd.getMessage();
-  if (msg.length &gt; 0) {
+  if (msg.length > 0) {
     msg.unshift('Количество объектов: ' + msg.length);
     GmailApp.sendEmail(
       Session.getActiveUser().getEmail(),
