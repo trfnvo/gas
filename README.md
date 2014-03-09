@@ -14,6 +14,7 @@ triggerId - required, can be retrieved using function getTriggersId():
 var fox = new GDriveFox({funcName: 'myFunction', sourceFolderId: '01234', triggerId: '09876'});
 fox.getRight();
 ```
+[![ScreenShot](https://raw.github.com/dab00/gas/master/scr/scr4.jpg)](http://youtu.be/JWvlmo-wVFA)
 
 **GDriveDog.gs** - getting notification on changes on Google Drive. [Read details...](http://www.daspot.ru/2013/12/google-drive-2.html)
 
