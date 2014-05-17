@@ -1,6 +1,9 @@
 Google Apps Script code
 =======================
 
+#### Warning! None of these solutions is not working at the moment due to the closure by Google of some essential services
+
+
 **GDriveFox.gs** - getting owner's rights on files on Google Drive
 
 Example 1. Getting owner's rights on files located in folder with id = 01234 manually:
